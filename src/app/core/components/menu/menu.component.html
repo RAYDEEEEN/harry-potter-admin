@@ -1,0 +1,15 @@
+<ul class="menu p-4 shadow-lg bg-base-200 rounded-box">
+  <li class="menu-title">
+    <span>Harry Potter Admin </span>
+  </li>
+  <li *ngFor="let item of items">
+    <a [routerLink]="item.link" routerLinkActive="bg-accent">
+      <img
+        *ngIf="item.icon"
+        class="inline-block w-5 h-5 mr-2 stroke-current"
+        src="assets/icons/{{ item.icon }}.svg"
+      />
+      {{ item.label }}
+    </a>
+  </li>
+</ul>
