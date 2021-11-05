@@ -1,0 +1,41 @@
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Maison</th>
+        <th>Genre</th>
+        <th>Type</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let character of characters">
+        <td>
+          <div class="flex items-center space-x-3">
+            <div class="avatar">
+              <div class="w-12 h-12 mask mask-squircle">
+                <img [src]="character.image" [alt]="character.name" />
+              </div>
+            </div>
+            <div>
+              <div class="font-bold">{{ character.name }}</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="avatar">
+            <div class="w-12 h-12 mask mask-squircle">
+              <img [src]="character.house.image" [alt]="character.house.name" />
+            </div>
+          </div>
+        </td>
+        <td>{{ character.gender }}</td>
+        <td>{{ character.species }}</td>
+        <th>
+          <button class="btn btn-sm btn-primary">Edit</button>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
